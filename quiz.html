@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Going out</title>
+	<link rel="stylesheet" href="styles/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+</head>
+<body>
+	<main>
+		<!-- <section class="top">
+			<div class="imgContainer"><img src="assets/fatGuy.svg" alt=""></div>
+			<div class="textContainer"></div>
+		</section> -->
+		<div class="wrapper">
+			<div class="estimatedTime invisible">
+				<h2 class="estimatedTime__text"></h2>
+				<a href="index.html" class="reset">Again?</a>
+			</div>
+			<h2 class="sassy invisible"></h2>
+			<form action="submit">
+				<fieldset class="timeToDest">
+					<img src="assets/assistant--armsDown.svg" alt="" class="assistant">
+					<h2 class="quizHeader">How successful are your "friends" at avoiding you? <br>(How long does it take to get to your event?)</h2>
+					<select>
+					  <option value="5">5min</option>
+					  <option value="15">15min</option>
+					  <option value="30">30min</option>
+					  <option value="45">45min</option>
+					  <option value="60">1hour</option>
+					  <option value="120">2hours</option>
+					</select>
+					<div class="button timeToDest__button">Next</div>
+				</fieldset>
+				<fieldset class="typeOfParty invisible">
+					<img src="assets/assistant--armsDown.svg" alt="" class="assistant">
+					<h2 class="quizHeader">Oh look at you!  You look awful.  You should probably change... What will you change into?</h2>
+					
+					<input type="radio" id="typeOfParty" name="clothing" value="0" checked class="invisible">
+			
+					<div>
+						<input type="radio" value="20" name="clothing" id="typeOfParty--fancy">
+						<label for="typeOfParty--fancy">Fancy clothing</label>
+					</div>
+			
+					<div>
+						<input type="radio" value="10" name="clothing" id="typeOfParty--casual">
+						<label for="typeOfParty--casual">Casual clothing</label>
+					</div>
+			
+					<div>
+						<input type="radio" value="0" name="clothing" id="typeOfParty--ready">
+						<label for="typeOfParty--ready">I don't need to change.  I'm ready to go!</label>
+					</div>
+					<div class="button typeOfParty__button">Next</div>
+				</fieldset>
+				<fieldset class="clean invisible">
+					<img src="assets/assistant--armsDown.svg" alt="" class="assistant">
+					<h2 class="quizHeader">You should probably shower....</h2>
+					
+					<input type="radio" id="clean--invisible" name="cleanBody" value="0" checked class="invisible">
+			
+					<div>
+						<input type="radio" name="cleanBody" id="clean--clean" value="0">
+						<label for="clean--clean">I dont need to shower</label>
+					</div>
+			
+					<div>
+						<input type="radio" name="cleanBody" id="clean--touchUp" value="5">
+						<label for="clean--touchUp">I just need to wash my face</label>
+					</div>
+			
+					<div>
+						<input type="radio" name="cleanBody" id="clean--shower" value="15">
+						<label for="clean--shower">I need to take a shower</label>
+					</div>
+			
+					<div>
+						<input type="radio" name="cleanBody" id="clean--disgusting" value="30">
+						<label for="clean--disgusting">I need to be hosed down in the backyard.</label>
+					</div>
+					<div class="button clean__button">Next</div>
+				</fieldset>
+				<fieldset class="grooming invisible">
+					<img src="assets/assistant--armsDown.svg" alt="" class="assistant">
+					<h2 class="quizHeader">Do you need to:</h2>
+			
+					<input type="checkbox" id="grooming--invisible" name="groom" value="0" checked class="invisible">
+			
+					<div>
+						<input type="checkbox" id="grooming--shave" name="groom" value="5">
+						<label for="grooming--shave">I need to shave</label>
+					</div>
+			
+					<div>
+						<input type="checkbox" id="grooming--brushTeeth" name="groom" value="3">
+						<label for="grooming--brushTeeth">I need to brush my teeth</label>
+					</div>
+			
+					<div>
+						<input type="checkbox" id="grooming--hair" name="groom" value="10">
+						<label for="grooming--hair">Style hair</label>
+					</div>
+					
+					<div class="button grooming__button">Next</div>
+				</fieldset>
+				<fieldset class="makeup invisible">
+					<img src="assets/assistant--armsDown.svg" alt="" class="assistant">
+					<h2 class="quizHeader">How much makeup do you wear?</h2>
+					<img src="assets/littleGhost.png" alt="" class="clown">
+					<label for="makeup"></label>
+					<input type="range" name="makeup" id="makeup" min="0" max="40" value="0">
+					<div class="button makeup__button">Next</div>
+				</fieldset>
+				<fieldset class="procrastinate invisible">
+					<img src="assets/assistant--armsDown.svg" alt="" class="assistant">
+					<h2 class="quizHeader">Do you or your partner procrastinate?</h2>
+			
+					<input type="radio" id="procrastinate--invisible" name="procrastinate" value="0" checked class="invisible">
+			
+					<div>
+						<input type="radio" id=procrastinate--yes name="procrastinate" value="20">
+						<label for="procrastinate--yes">Yes</label>
+					</div>
+			
+					<div>
+						<input type="radio" id=procrastinate--no name="procrastinate" value="0">
+						<label for="procrastinate--no">No</label>
+					</div>
+
+					<div class="button procrastinate__button">Next</div>
+				</fieldset>
+				<fieldset class="arrival invisible">
+					<img src="assets/assistant--armsDown.svg" alt="" class="assistant">
+					<h2 class="quizHeader">Do you want to be fashionably late because you dont respect your friends' time?</h2>
+					<div>
+						<input type="radio" id="arrival--ok" name="arrival" value="30">
+						<label for="arrival--ok">Yes</label>
+					</div>
+			
+					<div>
+						<input type="radio" id="arrival--late" name="arrival" value="0">
+						<label for="arrival--late">No</label>
+					</div>
+					<div class="button" id="submit">Submit</div>
+				</fieldset>
+			</form>
+		</div>
+		<!-- <section class="departureTime invisible"><h2 class="departureTime invisible"></h2><div class="button" id="reset">Again?</div></section> -->
+
+	</main>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="scripts/script.js"></script>
+</body>
+</html>
